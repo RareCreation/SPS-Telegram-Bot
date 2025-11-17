@@ -2,7 +2,8 @@ import requests
 
 from config.config import API_KEY, STEAM_API_KEY
 
-async def resolve_vanity_url(vanity_url: str) -> str:
+
+def resolve_vanity_url(vanity_url: str) -> str:
     api_url = "https://api.steampowered.com/ISteamUser/ResolveVanityURL/v1/"
     params = {"key": STEAM_API_KEY, "vanityurl": vanity_url}
     response = requests.get(api_url, params=params, timeout=10)
@@ -10,6 +11,7 @@ async def resolve_vanity_url(vanity_url: str) -> str:
     if data.get("response", {}).get("success") == 1:
         return data["response"]["steamid"]
     raise ValueError("Кастомный URL не найден или профиль приватный")
+
 
 def get_steam_profile_webapi(steam_id_or_url: str):
     base_url = "https://www.steamwebapi.com/steam/api/profile"
