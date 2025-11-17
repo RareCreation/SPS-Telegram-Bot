@@ -36,7 +36,7 @@ def get_inventory_value(steam_id: str):
     url = "https://www.steamwebapi.com/steam/api/inventory"
     params = {
         "steam_id": steam_id,
-        "game": "cs2",
+        "game": "tf2",
         "key": API_KEY,
         "parse": "true"
     }
