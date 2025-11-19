@@ -36,7 +36,7 @@ This repository contains a Telegram bot built using `aiogram`.
 4. Create a `.env` in the main project directory.
    ```
    TOKEN=your_bot_token
-   API_KEY=your_api_key_from_steamwebapi
+   API_KEY=your_api_key_from_lolz
    STEAM_API_KEY=your_steam_api_key
    ```
 
